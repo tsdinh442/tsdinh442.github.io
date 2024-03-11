@@ -9,30 +9,74 @@
         table {
             width: 100%;
             table-layout: fixed;
+            border-collapse: collapse; /* Add this line to collapse the borders */
         }
+
         th, td {
             padding: 8px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            border-bottom: none; /* Remove the border */
         }
         th {
             background-color: #f2f2f2;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        #table1 {
+        border-collapse: collapse;
+        width: 100%;
+        }
+        #table1 th, #table1 td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+        border-color: black;
+        }
+        #table1 img {
+        display: block;
+        margin: 0 auto;
         }
 
+        footer {
+        background-color: #ffffff;
+        color: rgb(112, 112, 112);
+        text-align: right;
+        padding: 0px;
+        position: sticky;
+        bottom: 5;
+        font-weight: light;
+        padding-bottom: 3;
+        }
     </style>
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+          const projectToggles = document.querySelectorAll('.project-toggle');
+  
+          projectToggles.forEach(toggle => {
+              toggle.addEventListener('click', function () {
+                  const arrow = this.querySelector('span');
+                  arrow.classList.toggle('rotate');
+                  if (arrow.innerHTML === '▶') {
+                      arrow.innerHTML = '▼'; // Change to &#x25BC; when rotated
+                  } else {
+                      arrow.innerHTML = '▶'; // Change back to &#x25B2; when rotated back
+                  }
+              });
+          });
+      });
+  </script>
 </head>
-<body style="padding-left: 20px;">
+<body style="padding-left: 20px; padding-right: 20px;">
 
 <div style="text-align: center;">
     <p style="font-size: 40px; font-weight: bold;">TUNG DINH</p>
     <p style="font-size: 14px; font-weight: light;">AI - Machine Learning - Computer Vision - Architecture - Computational Design</p>
+    
+    <a href="https://github.com/tsdinh442">
+      <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white&color=black">
+    </a>
+    
     <a href="https://www.linkedin.com/in/tung-dinh/">
         <img src="https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=linkedin&color=black">
     </a>
@@ -57,37 +101,105 @@
 </div>
 
 <br/><br/>
-<h2 style="font-size: 14px; font-weight: light;">Projects</h2>
 <div style="text-align: center;">
-  
-  <table>
+    <table>
       <tr>
-          <td style="vertical-align: top;">
-              <a href="https://github.com/tsdinh442/parking-space-counter">Parking Occupancy Analysis</a><br/>
-              <a href="https://github.com/tsdinh442/parking-space-counter"><img src="media/1.jpg" alt="gif" width="250"></a><br/>
-              <img src='https://img.shields.io/badge/image%20classification%20-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/VGG16-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/XGBoost-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/OpenCV-8A2BE2'>
-          </td>
-          <td style="vertical-align: top;">
-              <a href="https://github.com/tsdinh442/car_counter_GUI">Car Counter GUI</a><br/>
-              <a href='https://github.com/tsdinh442/car_counter_GUI'><img src="media/2.jpg" alt="image" width="250"></a><br/>
-              <img src='https://img.shields.io/badge/object%20detection%20-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/YOLO-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/OpenCV-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/Tkinter-8A2BE2'>
-          </td>
-          <td style="vertical-align: top;">
-              <a href='https://github.com/tsdinh442/SAM-notator'>SAM-notator</a><br/>
-              <a href='https://github.com/tsdinh442/SAM-notator'><img src="media/3.png" alt="image" width="250"></a><br/>
-              <img src='https://img.shields.io/badge/segmentation%20-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/SAM-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/OpenCV-8A2BE2'><br/>
-              <img src='https://img.shields.io/badge/Tkinter-8A2BE2'>
+        <th>🖥️ Projects</th>
+      </tr>
+      <!-- Machine Learning / Computer Vision -->
+      <tr>
+          <td >
+            <a style="color: black; text-decoration: none;" href="#" class="project-toggle custom-class" data-bs-toggle="collapse" data-bs-target="#project1">Machine Learning / Computer Vision  <span>▶</span></a>
+            <div style="padding-top: 20px;" id="project1" class="collapse project-content">
+          
+              <table id="table1">
+                <tr>
+                  <td style="font-size: 14px; text-align: center; line-height: 1;">
+                    <a style="color: black; text-decoration: none; font-weight: bold;" href="https://github.com/tsdinh442/computer-vision-projects/tree/main/0_capstone/parking_occupancy_monitoring">Parking Occupancy Analysis</a><br/>
+                    <a href='https://github.com/tsdinh442/computer-vision-projects/tree/main/0_capstone/parking_occupancy_monitoring'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/1_parking.gif" alt="image" width="250"></a>
+                    
+                    <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Monitoring parking occupancy at scale using drones and AI.</a>
+                    
+                    <p style="display: flex;">
+                        <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/object%20detection-eeeeee'>
+                        <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/YOLO-eeeeee'>
+                        <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/SIFT-eeeeee'>
+                        <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/drone-eeeeee'>
+                    </p>
+                  
+                  </td>
+                    <td style="font-size: 14px; text-align: center; line-height: 1;">
+                      <a style="color: black; text-decoration: none; font-weight: bold;" href="https://github.com/tsdinh442/computer-vision-projects/tree/main/1_object_tracking">Object Tracking with Kalman Filters</a><br/>
+                      <a href='https://github.com/tsdinh442/computer-vision-projects/tree/main/1_object_tracking'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/2_track.gif" alt="image" width="250"></a>
+                      
+                      <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Track and predict trajectories of multiple cars in a video.</a>
+                      
+                      <p style="display: flex;">
+                          <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/Kalman%20Filters-eeeeee'>
+                          <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/object%20tracking-eeeeee'>
+                          <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/YOLO-eeeeee'>
+                      </p>
+                  </td>
+                    
+                  <td style="font-size: 14px; text-align: center; line-height: 1;">
+                    <a style="color: black; text-decoration: none; font-weight: bold;" href="https://github.com/tsdinh442/SAM-notator">SAM-notator</a><br/>
+                    <a href='https://github.com/tsdinh442/SAM-notator'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/3_segmentation.png" alt="image" width="250"></a>
+                    
+                    <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">An automatic annotator tool that speeds up the process of selecting an object and its label. </a>
+                    
+                    <p style="display: flex;">
+                        <img style="padding-top: 10px; padding-bottom: 5px; " src='https://img.shields.io/badge/object%20segmentation-eeeeee'>
+                        <img style="padding-top: 10px; padding-bottom: 5px;" src='https://img.shields.io/badge/SAM-eeeeee'>
+                    </p>
+                  </td>
+                    
+                
+                  <td style="font-size: 14px; text-align: center; line-height: 1;">
+                    <a style="color: black; text-decoration: none; font-weight: bold;" href="https://github.com/tsdinh442/road-extraction">Road Extraction</a><br/>
+                    <a href='https://github.com/tsdinh442/road-extraction'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/4_road.png" alt="image" width="250"></a>
+                    
+                    <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Extracting road network from satellite imagery where GIS data is unavailable.</a>
+                    
+                    <p style="display: flex;">
+                        <img style="padding-top: 10px; padding-bottom: 5px; " src='https://img.shields.io/badge/object%20segmentation-eeeeee'>
+                        <img style="padding-top: 10px; padding-bottom: 5px;" src='https://img.shields.io/badge/UNet-eeeeee'>
+                    </p>
+                  </td>
+                    <!-- Add more cells for additional projects -->
+                </tr>
+            </table>
+            </div>
           </td>
       </tr>
-  </table>
+      <tr>
+        <td>
+            <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project2">Computational Design  <span>&#x25B6;</span></a>
+            <div style="padding-top: 20px;" id="project2" class="collapse project-content">
+                <a href='https://issuu.com/tsdinh/docs/portfolio_issuu'><img src="media/projects/architecture.gif" alt="image" width="250"></a>
+                <p style="display: flex;">
+                  <img style="padding-top: 10px; padding-bottom: 5px; padding-right: 5px;" src='https://img.shields.io/badge/Rhino3D-eeeeee'> 
+                  <img style="padding-top: 10px; padding-bottom: 5px; padding-right: 6px;"" src='https://img.shields.io/badge/Grasshopper-eeeeee'>
+                  <img style="padding-top: 10px; padding-bottom: 5px;" src='https://img.shields.io/badge/Python-eeeeee'>
+              </p>
+            </div>
+        </td>
+    </tr>
+      <tr>
+          <td>
+              <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project3">Architecture  <span>&#x25B6;</span></a>
+              <div style="padding-top: 20px;" id="project3" class="collapse project-content">
+                  <a href='https://issuu.com/tsdinh/docs/portfolio_issuu'><img src="media/projects/architecture.gif" alt="image" width="250"></a>
+                  
+              </div>
+          </td>
+      </tr>
+    </table>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<footer>
+  <p style="font-size: 12px;"> 🤖 💻 📐 | Tung Dinh | Portfolio | 2024</p>
+</footer>
+</body>
 
 </html>
