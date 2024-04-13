@@ -9,7 +9,7 @@
         table {
             width: 100%;
             table-layout: fixed;
-            border-collapse: collapse; /* Add this line to collapse the borders */
+            border-collapse: collapse; 
         }
 
         th, td {
@@ -27,17 +27,20 @@
         border-collapse: collapse;
         width: 100%;
         }
-        #table1 th, #table1 td {
+        #table1 th, #table1 td, #table2 th, #table2 td {
         border: 1px solid black;
         padding: 8px;
         text-align: left;
         border-color: black;
         }
-        #table1 img {
+        #table1 img, #table2 img {
         display: block;
         margin: 0 auto;
         }
-
+        #table2 {
+        border-collapse: collapse;
+        width: 25%;
+        }
         footer {
         background-color: #ffffff;
         color: rgb(112, 112, 112);
@@ -176,6 +179,30 @@
       </tr>
       <tr>
         <td>
+            <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project3">Geospatial Analysis <span>&#x25B6;</span></a>
+            <div style="padding-top: 20px;" id="project3" class="collapse project-content">
+                <table id="table2">
+                    <tr>
+                      <td style="font-size: 14px; text-align: center; line-height: 1;">
+                        <a style="color: black; text-decoration: none; font-weight: bold;" href="https://github.com/tsdinh442/computer-vision-projects/tree/main/0_capstone/parking_occupancy_monitoring">Parking Occupancy Analysis</a><br/>
+                        <a href='https://github.com/tsdinh442/Libya_flood_assessment'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/GEO_1_Libya.jpg" alt="image" width="250"></a>
+                        
+                        <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Assessing flood damage by overlaying previous building footprints onto post event satellite imagery.</a>
+                        
+                        <p style="display: flex;">
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/shapely-eeeeee'>
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/leafmap-eeeeee'>
+                
+                      
+                      </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </td>
+    </tr>
+      <tr>
+        <td>
             <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project2">Computational Programming  <span>&#x25B6;</span></a>
             <div style="padding-top: 20px;" id="project2" class="collapse project-content">
                 <a href='https://www.youtube.com/watch?v=jzKCkp9zv7U'><img src="media/projects/computational_programming.gif" alt="image" width="250"></a>
@@ -187,15 +214,15 @@
             </div>
         </td>
     </tr>
-      <tr>
-          <td>
-              <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project3">Architecture  <span>&#x25B6;</span></a>
-              <div style="padding-top: 20px;" id="project3" class="collapse project-content">
-                  <a href='https://issuu.com/tsdinh/docs/portfolio_issuu'><img src="media/projects/architecture.gif" alt="image" width="250"></a>
-                  
-              </div>
-          </td>
-      </tr>
+    <tr>
+        <td>
+            <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project3">Architecture  <span>&#x25B6;</span></a>
+            <div style="padding-top: 20px;" id="project3" class="collapse project-content">
+                <a href='https://issuu.com/tsdinh/docs/portfolio_issuu'><img src="media/projects/architecture.gif" alt="image" width="250"></a>
+                
+            </div>
+        </td>
+    </tr>
     </table>
 </div>
 
