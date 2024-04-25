@@ -27,13 +27,13 @@
         border-collapse: collapse;
         width: 100%;
         }
-        #table1 th, #table1 td, #table2 th, #table2 td, #table3 td, #table3 tr {
+        #table1 th, #table1 td, #table2 th, #table2 td, #table3 th, #table3 td, #table4 th, #table4 td {
         border: 1px solid black;
         padding: 8px;
         text-align: left;
         border-color: black;
         }
-        #table1 img, #table2 img, #table3 img {
+        #table1 img, #table2 img, #table3 img, #table4 img {
         display: block;
         margin: 0 auto;
         }
@@ -44,6 +44,10 @@
         #table3 {
         border-collapse: collapse;
         width: 25%; 
+        }
+        #table4 {
+        border-collapse: collapse;
+        width: 75%;   
         }
         footer {
         background-color: #ffffff;
@@ -181,27 +185,27 @@
             </div>
           </td>
       </tr>
+      <!-- Geospatial Analysis -->
       <tr>
         <td>
             <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project2">Geospatial Analysis <span>&#x25B6;</span></a>
             <div style="padding-top: 20px;" id="project2" class="collapse project-content">
-                <table id="table2">
+                <table id="table4">
                     <tr>
                       <td style="font-size: 14px; text-align: center; line-height: 1;">
-                        <a style="color: black; text-decoration: none; font-weight: bold;" href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis'>Drone to Map</a><br/>
-                        <a href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/GEO_2_Drones.png" alt="image" width="250"></a>
+                        <a style="color: black; text-decoration: none; font-weight: bold;" href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis/drone_to_map.ipynb'>Drone to Map</a><br/>
+                        <a href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis/drone_to_map.ipynb'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/GEO_2_Drones.png" alt="image" width="250"></a>
                         
                         <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Converting drone images into the GeoTIFF format, enhancing its usability for spatial analysis and visualization.</a>
                         
                         <p style="display: flex;">
                             <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/rasterio-eeeeee'>
-                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/leafmap-eeeeee'>
-                                      
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/leafmap-eeeeee'>                                
                       </td>
 
                       <td style="font-size: 14px; text-align: center; line-height: 1;">
-                        <a style="color: black; text-decoration: none; font-weight: bold;" href='https://github.com/tsdinh442/geospatial_analysis/tree/main/2_parking_lots_analysis'>Raster to Vector</a><br/>
-                        <a href='https://github.com/tsdinh442/geospatial_analysis/tree/main/2_parking_lots_analysis'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/GEO_2_Parking.png" alt="image" width="250"></a>
+                        <a style="color: black; text-decoration: none; font-weight: bold;" href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis/raster_to_vector.ipynb'>Raster to Vector</a><br/>
+                        <a href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis/raster_to_vector.ipynb'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/GEO_2_Parking.png" alt="image" width="250"></a>
                         
                         <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Creating shapefile of parking lot layouts from binany masks and georeferenced satellte images</a>
                         
@@ -209,17 +213,28 @@
                             <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/shapely-eeeeee'>
                             <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/leafmap-eeeeee'>
                             <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/rasterio-eeeeee'>
-                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/openCV-eeeeee'>
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/shapefile-eeeeee'>                               
+                      </td>
 
-                
-                      
+                      <td style="font-size: 14px; text-align: center; line-height: 1;">
+                        <a style="color: black; text-decoration: none; font-weight: bold;" href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis/attribute_integration.ipynb'>Attribute Integration</a><br/>
+                        <a href='https://github.com/tsdinh442/geospatial_analysis/blob/main/2_parking_lots_analysis/attribute_integration.ipynbs'><img style="margin-top: 10px; margin-bottom: 10px;" src="media/projects/GEO_3_Attribute.png" alt="image" width="250"></a>
+                        
+                        <a style="font-size: 12px; font-weight: light; margin-top: 10px; white-space: normal;">Creating shapefile of parking lot layouts from binany masks and georeferenced satellte images</a>
+                        
+                        <p style="display: flex;">
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/shapely-eeeeee'>
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/leafmap-eeeeee'>
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/folium-eeeeee'>
+                            <img style="padding-top: 10px; padding-bottom: 5px; max-width: 100px;" src='https://img.shields.io/badge/geopandas-eeeeee'>                               
                       </td>
                     </tr>
                 </table>
                 
             </div>
         </td>
-    </tr>
+      </tr>
+      <!-- Computational Design -->
       <tr>
         <td>
             <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project3">Computational Design Programming  <span>&#x25B6;</span></a>
@@ -233,15 +248,14 @@
                     <img style="padding-top: 10px; padding-bottom: 5px; padding-right: 5px;" src='https://img.shields.io/badge/Rhino3D-eeeeee'> 
                     <img style="padding-top: 10px; padding-bottom: 5px; padding-right: 6px;"" src='https://img.shields.io/badge/Grasshopper-eeeeee'>
                     <img style="padding-top: 10px; padding-bottom: 5px;" src='https://img.shields.io/badge/Python-eeeeee'>
-                    </p>
-            
-                  
+                    </p>                            
                   </td>
                 </tr>
                 </table>
             </div>
         </td>
     </tr>
+    <!-- Architecture -->
     <tr>
         <td>
             <a style="color: black; text-decoration: none;" href="#" class="project-toggle" data-bs-toggle="collapse" data-bs-target="#project4">Architecture  <span>&#x25B6;</span></a>
